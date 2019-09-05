@@ -12,6 +12,12 @@ class PigLatinizer
     result.join(" ")
   end
 
+  def piglatinized
+    collection = []
+    result = @sentence.split(" ").map{|word| latinize(word) }
+    result.join(" ")
+  end
+
   private
   def latinize(word)
     vowels = "AEIOUaeiou"
