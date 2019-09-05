@@ -17,18 +17,12 @@ class PigLatinizer
     vowels = "AEIOUaeiou"
     vowels_split = word.split(/[aeiou]/)
     contains_vowels = vowels_split.size > 1
-    #binding.pry
     case vowels.include?(word.split("").first)
       when true
         return word + "way"
       when false
-        #if contains_vowels
-            #binding.pry
             last_part = word.slice(first_vowel_location(word, vowels), word.size)
             return last_part + vowels_split[0] + "ay"
-        #else
-
-        #end
     end
   end
 
