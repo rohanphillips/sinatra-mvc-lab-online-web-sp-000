@@ -5,7 +5,7 @@ class PigLatinizer
     @sentence = string
   end
 
-  def result
+  def piglatinize
     collection = []
     result = @sentence.split(" ").map{|word| latinize(word) }
     result.join(" ")
