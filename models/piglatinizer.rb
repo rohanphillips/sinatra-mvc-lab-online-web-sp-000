@@ -20,7 +20,6 @@ class PigLatinizer
 
       when false
         collection = word.split(/[aeiou]/)
-        binding.pry
     end
   end
 end
