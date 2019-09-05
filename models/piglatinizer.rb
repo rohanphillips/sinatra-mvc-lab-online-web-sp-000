@@ -8,9 +8,7 @@ class PigLatinizer
   def result
     #binding.pry
     collection = []
-    result = @sentence.split(" ").map{|word|
-      collection << latinize(word)
-    }
+    result = @sentence.split(" ").map{|word| latinize(word) }
     result.join(" ")
   end
 
