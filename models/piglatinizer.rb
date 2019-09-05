@@ -15,7 +15,7 @@ class PigLatinizer
   private
   def latinize(word)
     vowels = "aeiou"
-    case vowels.include?(word.first)
+    case vowels.include?(word.split.first)
       when true
 
       when false
