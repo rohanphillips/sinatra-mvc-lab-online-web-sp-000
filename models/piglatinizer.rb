@@ -15,14 +15,19 @@ class PigLatinizer
   private
   def latinize(word)
     vowels = "aeiou"
-    contains_vowels = word.split(/[aeiou]/).size > 1
+    vowels_split = word.split(/[aeiou]/)
+    contains_vowels = vowels_split.size > 1
     case vowels.include?(word.split.first)
       when true
-
+        return word + "way"
       when false
-        collection = word.split(/[aeiou]/)
+        if contains_vowels
+            last_part = slice(first_vowel_location, word.size)
+            binding.pry
+        else
+
+        end
     end
-    binding.pry
   end
 
   def first_vowel_location(word, vowels)
