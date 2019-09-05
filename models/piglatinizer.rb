@@ -5,14 +5,14 @@ class PigLatinizer
     @sentence = string
   end
 
-  def self.result
+  def result
     result = @sentence.split(" ").map{|word|
-      latinize(word)
+      self.latinize(word)
     }
     result.join(" ")
   end
 
-  def latinize(word)
+  def self.latinize(word)
     vowels = "aeiou"
     case vowels.include?(word.first)
       when true
