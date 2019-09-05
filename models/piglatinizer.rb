@@ -14,7 +14,7 @@ class PigLatinizer
 
   private
   def latinize(word)
-    vowels = "aeiou"
+    vowels = "aeiouAEIOU"
     vowels_split = word.split(/[aeiou]/)
     contains_vowels = vowels_split.size > 1
     case vowels.include?(word.split.first)
