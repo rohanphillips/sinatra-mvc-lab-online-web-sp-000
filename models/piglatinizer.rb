@@ -15,6 +15,7 @@ class PigLatinizer
   private
   def latinize(word)
     vowels = "aeiou"
+    contains_vowels = word.split(/[aeiou]/).size > 1
     case vowels.include?(word.split.first)
       when true
 
@@ -24,7 +25,11 @@ class PigLatinizer
     binding.pry
   end
 
-  def first_vowel_location(word)
-
+  def first_vowel_location(word, vowels)
+    word.split.size.each do |i|
+      if vowels.include?(i)
+        return i
+      end
+    end
   end
 end
