@@ -32,9 +32,9 @@ class PigLatinizer
   end
 
   def first_vowel_location(word, vowels)
-    word.split.each do |i|
+    word.split.each_with_index do |i, index|
       if vowels.include?(i)
-        return i
+        return index
       end
     end
   end
