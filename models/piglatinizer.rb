@@ -19,7 +19,7 @@ class PigLatinizer
       when true
 
       when false
-        
+
     end
   end
 end
