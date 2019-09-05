@@ -22,7 +22,7 @@ class PigLatinizer
         return word + "way"
       when false
         if contains_vowels
-            last_part = slice(first_vowel_location, word.size)
+            last_part = slice(first_vowel_location(word, vowels), word.size)
             binding.pry
         else
 
@@ -37,4 +37,5 @@ class PigLatinizer
       end
     end
   end
+  
 end
