@@ -6,6 +6,7 @@ class PigLatinizer
   end
 
   def result
+    puts "here"
     result = @sentence.split(" ").map{|word|
       self.latinize(word)
     }
