@@ -31,6 +31,7 @@ class PigLatinizer
   end
 
   def first_vowel_location(word, vowels)
+    binding.pry
     word.split.size.each do |i|
       if vowels.include?(i)
         return i
