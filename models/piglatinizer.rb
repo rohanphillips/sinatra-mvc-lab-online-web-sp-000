@@ -9,12 +9,13 @@ class PigLatinizer
     #binding.pry
     collection = []
     result = @sentence.split(" ").map{|word|
-      #collection << latinize(word)
+      collection << latinize(word)
     }
     result.join(" ")
   end
 
-  def self.latinize(word)
+  private
+  def latinize(word)
     vowels = "aeiou"
     case vowels.include?(word.first)
       when true
