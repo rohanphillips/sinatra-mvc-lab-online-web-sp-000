@@ -21,13 +21,13 @@ class PigLatinizer
       when true
         return word + "way"
       when false
-        if contains_vowels
-            binding.pry
-            last_part = slice(first_vowel_location(word, vowels), word.size)
+        #if contains_vowels
+            #binding.pry
+            last_part = word.slice(first_vowel_location(word, vowels), word.size)
+            return last_part + vowels_split[0] + "ay"
+        #else
 
-        else
-
-        end
+        #end
     end
   end
 
