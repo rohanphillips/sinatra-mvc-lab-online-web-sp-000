@@ -7,7 +7,7 @@ class App < Sinatra::Base
     erb :user_input
   end
   post '/result' do
-    myClass = PigLatinizer.new(params[:text])
+    myClass = PigLatinizer.new(params[:sentence])
     binding.pry
     mySentence = myClass.result
     erb :pig_latin_result
