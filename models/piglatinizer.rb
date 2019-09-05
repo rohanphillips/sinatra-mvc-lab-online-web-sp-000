@@ -17,8 +17,8 @@ class PigLatinizer
     vowels = "AEIOUaeiou"
     vowels_split = word.split(/[aeiou]/)
     contains_vowels = vowels_split.size > 1
-    binding.pry
-    case vowels.include?(word.split.first)
+    #binding.pry
+    case vowels.include?(word.split("").first)
       when true
         return word + "way"
       when false
