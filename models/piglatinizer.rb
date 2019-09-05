@@ -21,5 +21,10 @@ class PigLatinizer
       when false
         collection = word.split(/[aeiou]/)
     end
+    binding.pry
+  end
+
+  def first_vowel_location(word)
+
   end
 end
